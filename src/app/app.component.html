@@ -1,0 +1,173 @@
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 via-purple-100 to-indigo-100 p-4 relative overflow-hidden">
+
+  <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+    <div class="heart-bg" style="top: 10%; left: 20%">❤️</div>
+    <div class="heart-bg" style="top: 70%; left: 80%">💖</div>
+    <div class="heart-bg" style="top: 40%; left: 10%">💕</div>
+  </div>
+
+  @if (!isOpen) {
+    <div class="cursor-pointer group perspective-1000" (click)="openEnvelope()">
+      <div class="relative w-80 h-52 bg-red-500 rounded-lg shadow-2xl transition-transform duration-700 transform group-hover:scale-105 group-hover:rotate-1">
+        
+        <div class="absolute top-0 left-0 w-full h-0 border-l-[160px] border-r-[160px] border-t-[100px] border-l-transparent border-r-transparent border-t-red-600 rounded-t-lg origin-top transition-all duration-700 group-hover:rotate-x-180 z-20"></div>
+        
+        <div class="absolute bottom-0 left-0 w-full h-full bg-red-500 rounded-lg z-10 flex items-center justify-center overflow-hidden">
+             <div class="w-16 h-16 bg-red-800 rounded-full flex items-center justify-center shadow-inner border-4 border-red-700">
+                <span class="text-2xl">💌</span>
+             </div>
+        </div>
+        
+        <div class="absolute top-2 left-4 right-4 h-48 bg-white rounded shadow-md z-0 transition-transform duration-700 group-hover:-translate-y-10">
+           <p class="text-center mt-4 text-gray-400 text-sm">Para ti...</p>
+        </div>
+      </div>
+      <p class="text-center mt-8 text-romantic-red font-bold animate-bounce">¡Toca el sobre!</p>
+    </div>
+  }
+
+ @if (isOpen) {
+<div class="max-w-3xl w-full bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-2xl animate-fade-in-up border border-white h-[80vh] overflow-y-auto custom-scrollbar">
+
+  <div class="text-center mb-8">
+    <h1 class="text-4xl font-handwriting text-rose-600 mb-2">Para ti... mi eterna ROSITA </h1>
+    <div class="h-1 w-24 bg-rose-300 mx-auto rounded-full"></div>
+  </div>
+
+  <div class="prose prose-lg text-gray-800 font-handwriting text-xl leading-loose text-justify">
+    
+    <p class="mb-4">
+      Sé que no es un día especial o alguna fecha importante y tal vez no es el mejor momento, pero no es necesario que lo sea para demostrarte que realmente te quiero de alguna manera fuera de lo común.
+    </p>
+
+    <p class="mb-4">
+      Siento que no ha pasado mucho tiempo desde que nos conocemos, pero en realidad han pasado más de 2 años y falta poco para que sean 3. Y en todo este tiempo HE SENTIDO que no he podido demostrarte esta parte, esta forma de quererte.
+    </p>
+
+    <p class="mb-4">
+      ¿Pero por qué sentía que no podía? Pues siendo sincero y directo, por las peleas constantes que hemos tenido; realmente me afectan mucho aunque no lo parezca, entre molestia, tristeza, entre otras cosas, que a ti también te pasa. Siento que todo eso me desanima de alguna manera darte este tipo de detalles. Aunque muchas veces sentía que algo quise hacerte, y muchas veces inicié algo pero fue interrumpido por peleas.
+    </p>
+
+    <p class="mb-4">
+      Últimamente lo he pensado más, y ya no quiero seguir así. Quisiera hacerte detalles bonitos, darte la mano en cualquier lugar, darte un beso en la frente, decirte que TE AMO en cualquier lugar y cuando quiera, abrazarte en todo momento, darte amor en este sentido, donde te haga sentir una princesa, porque eso es lo que eres: mi princesa, mi pequeñita, mi rosita. Quiero hacerte sentir amada, querida y segura por mí.
+    </p>
+
+    <p class="mb-4">
+      Ojalá pudiera explicarlo mejor. Espero haber encontrado algo visual, como un video o alguna canción, para explicar un poco más de lo que siento por ti y lo que quiero hacerte sentir, porque TE AMO CON TODO MI CORAZÓN y quiero que lo sientas, y que ese amor se refleje en ti y brilles como la princesa hermosa que eres.
+    </p>
+
+    <p class="mb-4">
+      También quisiera decirte algo para este momento que estamos pasando, porque siento que al escribirlo en un momento a solas, pensando y sintiendo lo que digo más a profundidad, puedo decirte lo que siento con más libertad que en persona, que a veces no es tan fácil para mí. Bueno, tal vez me equivoque.
+    </p>
+
+    <p class="mb-4">
+      Quiero empezar diciendo que no me queda claro de tu parte si en realidad sí decidiste continuar conmigo o sigues dudando. En ese momento en el que te pregunté si yo creo que eres mi novia, ¿yo qué soy para ti?, dijiste que "mi novio". Pero a pesar de eso sentí dudas, o eso es lo que me pareció; por eso quisiera saber si me equivoco o en realidad no. Es importante para mí.
+    </p>
+
+    <p class="mb-4">
+      Cuánto me gustaría poder entenderte por completo, pero me dijiste que ni tú sabes lo que es. Pero por mi parte quiero decirte que yo sí quiero continuar y estoy seguro de eso. Y espero de tu parte respetes eso siendo SINCERA también con lo que sientes.
+    </p>
+
+    <p class="mb-4">
+      Sé que tenemos que hablar y llegar a acuerdos. ¿Y sabes? No sé si es que lleguemos a un punto medio, a un acuerdo, o alguna forma de solucionar las cosas que más nos afectan, de tu parte y de mi parte.
+    </p>
+
+    <p class="mb-6">
+      Hubo cosas con las que para nada llegamos a un acuerdo; tú veías algo de una manera y yo de otra manera. ¿Qué hacemos en esas situaciones? Pues sí podemos hacer algo como lo siguiente:
+    </p>
+
+   <div class="relative bg-rose-50/80 backdrop-blur-sm p-8 rounded-2xl border-2 border-dashed border-rose-300 shadow-lg my-10 transform rotate-1 hover:rotate-0 transition-transform duration-500">
+  
+  <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-rose-200/50 rotate-[-2deg] shadow-sm rounded-sm"></div>
+
+  <h3 class="font-handwriting font-bold text-rose-600 text-3xl mb-6 text-center border-b border-rose-200 pb-2">
+    ✨ Un pequeño paréntesis...
+  </h3>
+  
+  <p class="mb-6 text-gray-700 font-handwriting text-xl text-center leading-relaxed">
+    Leí esto sobre psicología de parejas y pensé mucho en nosotros. No es que estemos mal, es que estamos aprendiendo a entendernos:
+  </p>
+  
+  <ul class="space-y-6 font-handwriting text-xl">
+    <li class="flex items-start">
+      <span class="text-2xl mr-3">❤️</span>
+      <div>
+        <strong class="text-rose-700 text-2xl block mb-1">Comunicación suave</strong>
+        <span class="text-gray-700">Hablar bajito, sin culpar. Decir <span class="text-rose-500">"Yo siento, Yo necesito, Para mí esto significa…"</span> en vez de atacar.</span>
+      </div>
+    </li>
+    
+    <li class="flex items-start">
+      <span class="text-2xl mr-3">🤝</span>
+      <div>
+        <strong class="text-rose-700 text-2xl block mb-1">Negociar con amor</strong>
+        <span class="text-gray-700">No se trata de ganar, se trata de que los dos estemos tranquilos. Ceder un poquito ambos.</span>
+      </div>
+    </li>
+    
+    <li class="flex items-start">
+      <span class="text-2xl mr-3">🧩</span>
+      <div>
+        <strong class="text-rose-700 text-2xl block mb-1">Diferencias ≠ Fin</strong>
+        <span class="text-gray-700">Que no estemos de acuerdo en todo no significa que no funcionemos. Solo nos falta encontrar el truco para resolverlo.</span>
+      </div>
+    </li>
+    
+    <li class="flex items-start">
+      <span class="text-2xl mr-3">⏸️</span>
+      <div>
+        <strong class="text-rose-700 text-2xl block mb-1">Pausa emocional</strong>
+        <span class="text-gray-700">Si nos enojamos, paremos un ratito. Respirar, calmarnos y volver a hablar con amor, no con rabia.</span>
+      </div>
+    </li>
+  </ul>
+  
+  <div class="mt-8 pt-6 border-t-2 border-dotted border-rose-300 text-center">
+    <strong class="text-rose-600 text-2xl block mb-2">Conclusión:</strong>
+    <span class="text-gray-800 font-handwriting text-xl">
+      El problema no es pelear, es cómo nos arreglamos. <br>
+      👉 Si los dos queremos, <b>siempre hay un camino.</b>
+    </span>
+  </div>
+</div>
+    <p class="mb-4">
+      No quiero perder la fe, realmente he creído y creo en nuestra relación. Yo te amo y no lo dejaré de hacer. Pero siento que me desanima muchísimo que tú me digas que dudas, incluso más que me terminaste, y ahora aún dudo si es que estamos o no. Siento eso, pero no quiero rendirme, quiero luchar por ti, por nosotros, nuestros planes, casarme contigo, quiero una vida contigo. Pero lo que hiciste me dolió mucho y aún me duele, porque lo terminaste.
+    </p>
+
+    <p class="mb-4">
+      Sé que tienes tus razones, y desde tu punto de vista pueden ser válidas; claro que respetaría tu decisión. Pero quiero que sepas, desde mi punto de vista no es justo, mejor dicho, no fue justo. Yo me he querido proteger de una persona que me terminó, que hizo algo injusto (para mí) y digo para mí porque yo soy el que vivió y vio las cosas que hice y no hice, las cosas que sentí, siento y quiero, que son las que siempre te menciono.
+    </p>
+
+    <p class="mb-4">
+      Protegerme, eso es lo que hice. Ese dolor de estar cerca de ti cuando ya me terminaste fue muy doloroso, ¿y sabes? Aún sigue siéndolo, a mi corazón le duele mucho. Pero aunque quise protegerme algo dentro de mí me hizo ir hacia a ti. ¿Hice lo correcto? Quisiera respuestas. ¿Te merezco? ¿Me mereces? Ojalá pudiera saber las respuestas de una vez, porque se lo pregunté a Dios, sé que responderá.
+    </p>
+
+    <p class="mb-4">
+      Yo no sé qué será de nosotros, pero me duele pensar que se pudo acabar si yo no iba detrás de ti. Tal vez pudo ser la última vez. Y me duele más pensar que tal vez haya una próxima vez y otra, y tal vez sea definitiva. Entonces, solo tengo miedo y estoy confundido.
+    </p>
+
+    <p class="mb-4 font-bold text-rose-600">
+      Me duele.
+    </p>
+
+    <p class="mb-4">
+      Para mí eres mi novia aún y por eso te hablo, y por eso te escribí lo del inicio, por eso aún sigo aquí.
+    </p>
+
+    <p class="mb-4">
+      Esto es lo que siento, tal vez tampoco lo supe explicar bien por escrito, pero espero al menos que se me entienda y no se me juzgue.
+    </p>
+
+    <p class="mb-8">
+      Quiero que recuerdes siempre que yo TE AMO, quiero lo mejor para ti, sea conmigo o sin mí y te lo dije desde siempre: tu felicidad me hará feliz a mí también.
+    </p>
+
+    <p class="text-right mt-12 text-3xl font-bold text-rose-600">
+      Con mucho amor, RISTO
+    </p>
+
+    </div>
+</div>
+}
+
+</div>

@@ -1,0 +1,39 @@
+/* Animación de entrada suave */
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Corazones flotantes de fondo */
+.heart-bg {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Para la perspectiva 3D del sobre */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-x-180 {
+  transform: rotateX(180deg); /* Abre la solapa */
+  z-index: 0; /* Hace que la solapa se vaya detrás al abrirse */
+}
