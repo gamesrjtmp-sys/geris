@@ -14,7 +14,7 @@ type ViewState = 'CAKE' | 'HUB' | 'NETFLIX' | 'COUPONS' | 'MUSEUM' | 'LETTER';;
 })
 export class CumpleGeriComponent {
   // ... (Aquí va el resto de tu lógica igual que antes) ...
-  currentView: ViewState = 'CAKE'; 
+  currentView: ViewState = 'CAKE';
   isCandleBlown = false;
   isBlowing = false; // Nuevo: Detecta si estás soplando
   blowTimer: any;
@@ -39,6 +39,51 @@ export class CumpleGeriComponent {
     { id: 7, title: '"Tu felicidad me hace feliz."', year: 'En mi mente y corazón', img: 'assets/images/proyeccion/parte2/23.jpeg' },
   ];
 
+  coupons = [
+    {
+      id: '001',
+      roman: 'Ⅰ',
+      title: 'Una Velada de Alta Cocina',
+      desc: 'Una experiencia culinaria en el lugar que elijas. Yo invito todo.'
+    },
+    {
+      id: '002',
+      roman: 'Ⅱ',
+      title: 'El Ritual de Relajación',
+      desc: 'Treinta minutos de tranquilidad absoluta. Masajes en cualquier parte de tu cuerpo (aprenderé contigo). Y todo lo necesario para que te relajes en un lugar cómodo.'
+    },
+    {
+      id: '003',
+      roman: 'Ⅲ',
+      title: 'Destino Final',
+      desc: 'Te acompañaré hasta el fin del mundo. Dime a qué lugar quieres ir y te acompañaré aunque no me guste ese lugar (no me sentiré obligado).'
+    },
+    {
+      id: '004',
+      roman: 'Ⅳ',
+      title: 'Actividad Inolvidable',
+      desc: 'Es tu oportunidad de hacer alguna actividad que incluso no me guste hacer, porque a mí me gusta hacer lo que sea a tu lado, así que piénsalo bien.'
+    },
+    {
+      id: '005',
+      roman: 'Ⅴ',
+      title: 'Postre del Amor',
+      desc: 'Dime algún postre que prefieras y yo te lo conseguiré. Del tipo que sea.'
+    },
+    {
+      id: '006',
+      roman: 'ⅤI',
+      title: 'Cocinando con Ris',
+      desc: 'Dime qué te gustaría que te cocine; aunque no sea mi pasión cocinar, por amor a ti lo haré con gusto, jeje.'
+    },
+    {
+      id: '007',
+      roman: 'ⅤII',
+      title: 'Día de playa',
+      desc: 'Una dia completo en la playa, yo me encargo de todo. Válido por primavera-verano.'
+    }
+  ];
+
 showIntroSequence = true;
   introTextVisible = false;
   curtainsAreOpening = false;
@@ -52,12 +97,12 @@ showIntroSequence = true;
 
   // ESTA FUNCIÓN SE ACTIVA AL HACER CLICK
   openCurtains() {
-    this.bgMusicCumple.play().catch(e => console.log("Interacción necesaria para audio"));  
+    this.bgMusicCumple.play().catch(e => console.log("Interacción necesaria para audio"));
     if (this.curtainsAreOpening) return; // Evitar doble click
 
     // 1. Ocultamos el texto
     this.introTextVisible = false;
-    
+
     // 2. Iniciamos la animación de las cortinas
     this.curtainsAreOpening = true;
 
@@ -87,19 +132,19 @@ showIntroSequence = true;
     this.generateChapters();
     this.bgMusic.loop = true;
     this.bgMusic.volume = 0.5;
-    
+
   }
 
   generateChapters() {
    const fotosParte2 = 34;
-    
-    const excluidos = [6, 7, 15, 16,19,20,21,22,23]; 
+
+    const excluidos = [6, 7, 15, 16,19,20,21,22,23];
 
     for (let i = 1; i <= fotosParte2; i++) {
-      
+
       // Si el número actual "i" está en la lista de excluidos, saltamos al siguiente
       if (excluidos.includes(i)) {
-        continue; 
+        continue;
       }
 
       this.originalChapters.push({
@@ -119,10 +164,10 @@ showIntroSequence = true;
   }
 
   startBlowing() {
-    
+
     if (this.isCandleBlown) return;
     this.isBlowing = true;
-    
+
     // Si mantienes presionado 1.5 segundos, se apagan
     this.blowTimer = setTimeout(() => {
       this.finishBlowing();
@@ -140,10 +185,10 @@ showIntroSequence = true;
   finishBlowing() {
     this.isBlowing = false;
     this.isCandleBlown = true;
-    
+
     // Confeti suave
     this.launchSoftConfetti();
-    
+
     // Música
     this.bgMusic.volume = 0.5;
     this.bgMusic.play().catch(() => {});
@@ -176,32 +221,32 @@ showIntroSequence = true;
   launchSoftConfetti() {
    const duration = 3000;
   const end = Date.now() + duration;
-  
+
   // CAMBIO: Colores más brillantes y dorados para resaltar en el negro
-  const colors = ['#ff0055', '#ffcc00', '#ffffff', '#ff88aa']; 
+  const colors = ['#ff0055', '#ffcc00', '#ffffff', '#ff88aa'];
 
   (function frame() {
-    confetti({ 
-      particleCount: 4, 
-      angle: 60, 
-      spread: 55, 
-      origin: { x: 0 }, 
-      colors, 
+    confetti({
+      particleCount: 4,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+      colors,
       scalar: 1.3, // Un poquito más grandes
       drift: 0.5,
       disableForReducedMotion: true
     });
-    confetti({ 
-      particleCount: 4, 
-      angle: 120, 
-      spread: 55, 
-      origin: { x: 1 }, 
-      colors, 
-      scalar: 1.3, 
+    confetti({
+      particleCount: 4,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+      colors,
+      scalar: 1.3,
       drift: -0.5,
       disableForReducedMotion: true
     });
-    
+
     if (Date.now() < end) requestAnimationFrame(frame);
   }());
   }

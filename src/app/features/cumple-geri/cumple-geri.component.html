@@ -1,16 +1,16 @@
 <main class="min-h-screen bg-slate-900 text-white overflow-hidden relative font-sans">
  @if (showIntroSequence) {
-  <div class="fixed inset-0 z-[100] flex items-center justify-center cursor-pointer" 
+  <div class="fixed inset-0 z-[100] flex items-center justify-center cursor-pointer"
        (click)="openCurtains()">
-       
+
        <div class="absolute z-[102] text-center transition-opacity duration-1000"
             [class.opacity-0]="!introTextVisible"
             [class.opacity-100]="introTextVisible">
-            
+
             <h1 class="font-handwriting text-6xl md:text-8xl text-rose-100 drop-shadow-[0_4px_10px_rgba(255,255,255,0.3)] mb-8">
               Feliz Cumpleaños,<br>Mi Amor
             </h1>
-            
+
             <p class="text-white/50 text-xs uppercase tracking-[0.3em] animate-pulse font-sans">
               ( Toca para comenzar )
             </p>
@@ -33,7 +33,7 @@
   <div class="h-screen w-full flex flex-col items-center justify-center relative transition-colors duration-[3000ms] ease-in-out overflow-hidden select-none"
        [class.bg-slate-900]="!isCandleBlown"
        [class.bg-black]="isCandleBlown">
-    
+
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,182,193,0.15)_0%,_rgba(15,23,42,1)_70%)] pointer-events-none transition-opacity duration-[3000ms]"
          [class.opacity-100]="!isCandleBlown"
          [class.opacity-0]="isCandleBlown"></div>
@@ -53,7 +53,7 @@
          (mouseleave)="stopBlowing()"
          (touchstart)="startBlowing()"
          (touchend)="stopBlowing()">
-      
+
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-orange-500/20 rounded-full blur-[100px] transition-opacity duration-1000"
            [class.opacity-100]="!isCandleBlown"
            [class.opacity-0]="isCandleBlown"></div>
@@ -89,7 +89,7 @@
             <div class="w-5 h-8 bg-rose-500 rounded-b-full shadow-inner"></div>
         </div>
       </div>
-          
+
       <div class="w-64 h-44 relative overflow-hidden mt-[-1px] shadow-[inset_0_-15px_40px_rgba(159,18,57,0.15),_inset_5px_0_10px_rgba(255,255,255,0.3),_inset_-5px_0_10px_rgba(255,255,255,0.3)]"
           style="border-radius: 40px 40px 50% 50% / 40px 40px 30px 30px; background: linear-gradient(90deg, #f3d3c5 0%, #fff5eb 50%, #f3d3c5 100%);">
 
@@ -120,7 +120,7 @@
 
  @if (currentView === 'HUB') {
    <div class="min-h-screen bg-[#F9F7F2] text-[#2C2C2C] p-6 flex flex-col items-center justify-center animate-fade-in font-sans-body">
-     
+
      <div class="text-center mb-12 relative">
        <span class="text-xs uppercase tracking-[0.3em] text-gray-500 mb-2 block">Bienvenida</span>
        <h2 class="text-5xl font-serif-display italic text-[#1a1a1a]">
@@ -130,17 +130,17 @@
      </div>
 
      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl w-full">
-       
-       <div (click)="navigate('NETFLIX')" 
+
+       <div (click)="navigate('NETFLIX')"
             class="col-span-1 md:col-span-2 group cursor-pointer relative h-64 overflow-hidden bg-[#1A1A1A] text-white shadow-xl transition-all duration-500 hover:shadow-2xl">
-            
+
             <img src="assets/images/foto-portada.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 group-hover:opacity-30 transition-all duration-700 grayscale" alt="Cinema">
-            
+
             <div class="absolute inset-0 p-8 flex flex-col justify-center items-center border-[1px] border-white/10 m-3">
                 <span class="text-[10px] uppercase tracking-[0.4em] mb-4 border border-white/30 px-3 py-1 rounded-full">En Proyección</span>
                 <h3 class="text-4xl font-serif-display italic mb-2">Nuestra Historia</h3>
                 <p class="text-xs tracking-widest opacity-70 font-light">EDICIÓN LIMITADA • TEMPORADA 3</p>
-                
+
                 <div class="mt-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <span class="text-xs border-b border-white pb-1">Ver Película</span>
                 </div>
@@ -149,7 +149,7 @@
 
        <div (click)="navigate('COUPONS')"
             class="group cursor-pointer bg-[#fffbf0] h-64 p-8 border border-[#eaddcf] shadow-sm hover:shadow-lg transition-all duration-500 flex flex-col justify-between relative overflow-hidden">
-            
+
             <span class="absolute -right-4 -bottom-8 text-9xl font-serif-display text-[#2c2c2c] opacity-[0.03] italic">Regalo</span>
 
             <div class="flex justify-between items-start">
@@ -167,11 +167,11 @@
 
        <div (click)="navigate('MUSEUM')"
             class="group cursor-pointer bg-[#2E3B30] h-64 text-[#F9F7F2] p-8 shadow-md hover:shadow-xl transition-all duration-500 flex flex-col justify-center items-center relative border border-[#3E4E40]">
-            
+
             <div class="absolute inset-4 border border-[#F9F7F2]/20"></div>
 
             <span class="text-3xl mb-4 font-thin opacity-80">❦</span>
-            
+
             <h3 class="text-3xl font-serif-display italic z-10">La Musa</h3>
             <p class="text-[10px] uppercase tracking-[0.3em] mt-2 opacity-60">Galería Privada</p>
 
@@ -182,7 +182,7 @@
 
        <div (click)="navigate('LETTER')"
           class="col-span-1 md:col-span-2 group cursor-pointer bg-[#F9F7F2] h-48 border border-[#eaddcf] shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden flex items-center justify-center">
-          
+
           <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#2c2c2c_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
           <div class="absolute inset-3 border-2 border-double border-[#C4A484]/30 group-hover:border-[#C4A484] transition-colors duration-500"></div>
@@ -193,7 +193,7 @@
               </div>
               <h3 class="text-3xl font-serif-display italic text-[#2c2c2c]">La Carta</h3>
               <p class="text-[10px] uppercase tracking-[0.3em] text-gray-500 mt-2 group-hover:text-[#C4A484] transition-colors">
-                Para mis ojos solamente
+                Para el amor de mi vida.
               </p>
           </div>
 
@@ -201,9 +201,9 @@
       </div>
 
      </div>
-     
+
      <p class="mt-16 text-[10px] uppercase tracking-[0.2em] text-gray-400">
-       Diseñado con amor por [Tu Nombre]
+       Diseñado con amor por tu futuro esposo.
      </p>
 
    </div>
@@ -211,29 +211,29 @@
 
  @if (currentView === 'NETFLIX') {
    <div class="min-h-screen bg-[#121212] text-[#F9F7F2] p-6 animate-fade-in font-sans-body">
-     
+
      <button (click)="goHome2()" class="text-xs uppercase tracking-[0.3em] text-white/60 hover:text-white mb-8 flex items-center group transition-all">
        <span class="group-hover:-translate-x-2 transition-transform duration-300 mr-2">←</span> Volver al Vestíbulo
      </button>
-     
+
      <div class="relative h-[65vh] w-full overflow-hidden mb-12 border border-white/10">
        <img src="assets/images/foto-portada.jpg" class="w-full h-full object-cover opacity-50 grayscale" alt="Portada">
-       
+
        <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-[#121212]/40 to-transparent"></div>
 
        <div class="absolute bottom-0 left-0 p-8 md:p-12 w-full max-w-2xl">
          <h1 class="text-6xl md:text-7xl font-serif-display italic mb-4 leading-tight">Nuestra Historia.</h1>
-         
+
          <div class="flex items-center gap-4 text-xs uppercase tracking-[0.2em] text-[#C4A484] mb-6 font-bold">
            <span>La Colección Definitiva</span>
            <span class="w-1 h-1 rounded-full bg-[#C4A484]"></span>
            <span>Temporada 3 Próximamente</span>
          </div>
-         
+
          <p class="text-lg text-white/80 mb-8 font-light italic max-w-lg leading-relaxed font-serif-display">
-           “El amor es sufrido, es benigno; el amor no tiene envidia, el amor no es jactancioso, no se envanece; no hace nada indebido, no busca lo suyo, no se irrita, no guarda rencor”. 1 Corintios 13:4-5. 
+           “El amor es sufrido, es benigno; el amor no tiene envidia, el amor no es jactancioso, no se envanece; no hace nada indebido, no busca lo suyo, no se irrita, no guarda rencor”. 1 Corintios 13:4-5.
          </p>
-         
+
          <button (click)="startShow()" class="border border-white/30 bg-white/5 text-white px-8 py-4 uppercase tracking-[0.3em] text-xs hover:bg-white hover:text-[#121212] transition-all duration-500">
              ▶ Iniciar Proyección
          </button>
@@ -245,15 +245,15 @@
       <div class="absolute right-0 top-0 h-full w-24 md:w-40 bg-gradient-to-l from-[#121212] to-transparent z-10 pointer-events-none"></div>
 
       <div class="flex gap-8 animate-infinite-scroll hover:paused w-max py-4">
-        
+
         @for (chapter of carouselItems; track $index) {
           <div (click)="openImage(chapter.img)"
             class="relative w-[300px] md:w-[350px] aspect-[4/3] bg-[#1A1A1A] border border-white/10 overflow-hidden flex-shrink-0 hover:border-[#C4A484]/50 transition-colors duration-300 group/card">
-    
-              <img [src]="chapter.img" 
+
+              <img [src]="chapter.img"
                   class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover/card:grayscale-0 group-hover/card:opacity-100 transition-all duration-700"
                   alt="Recuerdo">
-              
+
               <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
                 <span class="text-[10px] uppercase tracking-[0.3em] text-[#C4A484] mb-2 font-bold">{{ chapter.subtitle }}</span>
                 <h4 class="font-serif-display italic text-2xl text-[#F9F7F2]">{{ chapter.title }}</h4>
@@ -272,11 +272,11 @@
         </button>
 
         <div class="relative max-w-5xl max-h-[90vh] shadow-[0_0_50px_rgba(255,255,255,0.1)]" (click)="$event.stopPropagation()">
-          
-          <img [src]="selectedImage" 
-              class="max-w-full max-h-[85vh] object-contain border border-white/10" 
+
+          <img [src]="selectedImage"
+              class="max-w-full max-h-[85vh] object-contain border border-white/10"
               alt="Visualización completa">
-          
+
           <div class="absolute -bottom-10 left-0 w-full text-center">
             <span class="text-[#C4A484] font-serif-display italic text-sm tracking-widest opacity-80">
               Recuerdo Guardado
@@ -288,70 +288,61 @@
     }
  }
 
- @if (currentView === 'COUPONS') {
-   <div class="min-h-screen bg-[#F4F1EA] text-[#2C2C2C] p-6 animate-fade-in font-sans-body">
-     
-     <button (click)="goHome()" class="text-xs uppercase tracking-[0.3em] text-gray-500 hover:text-[#2C2C2C] mb-12 flex items-center group transition-all">
-       <span class="group-hover:-translate-x-2 transition-transform duration-300 mr-2">←</span> Volver
-     </button>
-     
-     <div class="text-center mb-16">
-       <span class="text-xs uppercase tracking-[0.4em] text-[#8c7b6c] block mb-3">Acceso Exclusivo</span>
-       <h1 class="text-5xl font-serif-display italic text-[#2c2c2c]">Tus Privilegios</h1>
-       <div class="w-16 h-[1px] bg-[#eaddcf] mx-auto mt-6"></div>
-     </div>
+@if (currentView === 'COUPONS') {
+  <div class="min-h-screen bg-[#F4F1EA] text-[#2C2C2C] p-6 animate-fade-in font-sans-body">
 
-     <div class="grid gap-8 max-w-2xl mx-auto">
-       
-       <div class="bg-[#F9F7F2] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] relative overflow-hidden group hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 border-t-[3px] border-[#C4A484]">
-         <div class="absolute top-4 right-6 text-xs uppercase tracking-widest text-[#C4A484]/60 font-bold">No. 001</div>
-         
-         <div class="flex items-start mb-6">
-           <div class="text-3xl mr-4 opacity-80 text-[#C4A484] font-serif-display">Ⅰ.</div>
-           <div>
-             <h3 class="text-3xl font-serif-display italic mb-3 text-[#2c2c2c]">Una Velada de Alta Cocina</h3>
-             <p class="text-gray-600 font-light leading-relaxed tracking-wide max-w-md font-serif-display italic">
-               "Una experiencia culinaria en el lugar que elijas. Yo invito todo. Validez perpetua."
-             </p>
-           </div>
-         </div>
-         
-         <div class="flex justify-end mt-8 pt-6 border-t border-[#eaddcf]">
-           <button class="text-xs uppercase tracking-[0.3em] text-[#2c2c2c] border-b border-[#2c2c2c] pb-1 hover:text-[#C4A484] hover:border-[#C4A484] transition-all duration-300"
-                   (click)="launchSoftConfetti()">
-               Canjear Privilegio →
-           </button>
-         </div>
-       </div>
+    <button (click)="goHome()" class="text-xs uppercase tracking-[0.3em] text-gray-500 hover:text-[#2C2C2C] mb-12 flex items-center group transition-all">
+      <span class="group-hover:-translate-x-2 transition-transform duration-300 mr-2">←</span> Volver
+    </button>
 
-       <div class="bg-[#F9F7F2] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] relative overflow-hidden group hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 border-t-[3px] border-[#C4A484]">
-         <div class="absolute top-4 right-6 text-xs uppercase tracking-widest text-[#C4A484]/60 font-bold">No. 002</div>
-         
-         <div class="flex items-start mb-6">
-           <div class="text-3xl mr-4 opacity-80 text-[#C4A484] font-serif-display">Ⅱ.</div>
-           <div>
-             <h3 class="text-3xl font-serif-display italic mb-3 text-[#2c2c2c]">El Ritual de Relajación</h3>
-             <p class="text-gray-600 font-light leading-relaxed tracking-wide max-w-md font-serif-display italic">
-               "Treinta minutos de tranquilidad absoluta. Aceites esenciales y atención dedicada incluidos."
-             </p>
-           </div>
-         </div>
-         
-         <div class="flex justify-end mt-8 pt-6 border-t border-[#eaddcf]">
-           <button class="text-xs uppercase tracking-[0.3em] text-[#2c2c2c] border-b border-[#2c2c2c] pb-1 hover:text-[#C4A484] hover:border-[#C4A484] transition-all duration-300"
-                   (click)="launchSoftConfetti()">
-               Canjear Privilegio →
-           </button>
-         </div>
-       </div>
-       
-     </div>
-   </div>
- }
+    <div class="text-center mb-16">
+      <span class="text-xs uppercase tracking-[0.4em] text-[#8c7b6c] block mb-3">Acceso Exclusivo</span>
+      <h1 class="text-5xl font-serif-display italic text-[#2c2c2c]">Tus Privilegios</h1>
+      <div class="w-16 h-[1px] bg-[#eaddcf] mx-auto mt-6"></div>
+    </div>
+
+    <div class="grid gap-8 max-w-2xl mx-auto">
+
+      @for (coupon of coupons; track $index) {
+        <div class="bg-[#F9F7F2] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] relative overflow-hidden group hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 border-t-[3px] border-[#C4A484]">
+
+          <div class="absolute top-4 right-6 text-xs uppercase tracking-widest text-[#C4A484]/60 font-bold">No. {{ coupon.id }}</div>
+
+          <div class="flex items-start mb-6">
+            <div class="text-3xl mr-4 opacity-80 text-[#C4A484] font-serif-display">{{ coupon.roman }}.</div>
+
+            <div>
+              <h3 class="text-3xl font-serif-display italic mb-3 text-[#2c2c2c]">{{ coupon.title }}</h3>
+              <p class="text-gray-600 font-light leading-relaxed tracking-wide max-w-md font-serif-display italic">
+                "{{ coupon.desc }}"
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-[#eaddcf]">
+
+            <div class="flex justify-end mb-4">
+              <button class="text-xs uppercase tracking-[0.3em] text-[#2c2c2c] border-b border-[#2c2c2c] pb-1 hover:text-[#C4A484] hover:border-[#C4A484] transition-all duration-300"
+                      (click)="launchSoftConfetti()">
+                  Canjear Privilegio →
+              </button>
+            </div>
+
+            <p class="text-[10px] text-center text-[#8c7b6c] font-serif-display italic tracking-wider opacity-80">
+              * Condición: Debes decírmelo personalmente para hacerlo válido.
+            </p>
+
+          </div>
+        </div>
+      }
+
+    </div>
+  </div>
+}
 
 @if (currentView === 'MUSEUM') {
   <div class="min-h-screen bg-[#2E3B30] text-[#F9F7F2] animate-fade-in font-sans-body overflow-hidden relative">
-    
+
     <div class="pt-8 px-6 md:px-12 mb-16 relative z-20 flex flex-col items-center">
        <button (click)="goHome()" class="self-start text-xs uppercase tracking-[0.3em] text-white/50 hover:text-white mb-8 flex items-center group transition-all">
         <span class="group-hover:-translate-x-2 transition-transform duration-300 mr-2">←</span> Volver al Vestíbulo
@@ -361,21 +352,21 @@
     </div>
 
     <div class="relative max-w-5xl mx-auto px-4 md:px-8 pb-32">
-      
+
       <div class="absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-[#C4A484]/40 to-transparent -translate-x-1/2 z-0"></div>
 
       @for (art of museumArtworks; track $index; let isEven = $even) {
-        
+
         <div class="relative flex flex-col md:flex-row items-center gap-8 md:gap-0 mb-32 group md:min-h-[50vh]"
              [ngClass]="isEven ? 'md:flex-row' : 'md:flex-row-reverse text-right'">
-             
+
           <div class="w-full md:w-7/12 relative z-10 cursor-zoom-in transition-transform duration-700 group-hover:scale-[1.01]"
                (click)="openImage(art.img)">
-            
+
             <div class="relative p-3 shadow-[0_25px_60px_rgba(0,0,0,0.5)] bg-[#232d25] border border-[#C4A484]/20">
               <div class="w-full bg-[#e5e0d8] overflow-hidden relative border border-gray-200 shadow-sm">
-                <img [src]="art.img" 
-                    class="w-full h-auto block grayscale contrast-[1.05] group-hover:grayscale-0 group-hover:contrast-100 transition-all duration-1000" 
+                <img [src]="art.img"
+                    class="w-full h-auto block grayscale contrast-[1.05] group-hover:grayscale-0 group-hover:contrast-100 transition-all duration-1000"
                     alt="Arte">
               </div>
             </div>
@@ -385,7 +376,7 @@
 
           <div class="w-full md:w-5/12 z-20 relative mt-4 md:mt-0"
                [ngClass]="isEven ? 'md:-ml-12' : 'md:-mr-12'">
-            
+
             <div class="bg-[#2E3B30]/90 backdrop-blur-md border border-[#C4A484]/30 p-6 md:p-8 shadow-xl relative overflow-hidden">
               <span class="absolute top-2 text-6xl font-serif-display text-[#C4A484]/5 font-black -z-10"
                     [ngClass]="isEven ? 'left-2' : 'right-2'">
@@ -407,7 +398,7 @@
 
         </div>
       }
-      
+
       <div class="text-center mt-32 opacity-50 flex flex-col items-center">
         <span class="text-2xl mb-4">❦</span>
         <p class="font-serif-display italic text-sm">Fin de la exhibición privada.</p>
@@ -419,14 +410,14 @@
 }
 @if (currentView === 'LETTER') {
   <div class="min-h-screen bg-[#e8e4dc] text-[#2C2C2C] p-4 md:p-12 animate-fade-in font-sans-body flex flex-col items-center">
-    
+
     <button (click)="goHome()" class="self-start md:absolute md:top-12 md:left-12 text-xs uppercase tracking-[0.3em] text-gray-500 hover:text-[#2C2C2C] mb-8 flex items-center group transition-all z-20">
       <span class="group-hover:-translate-x-2 transition-transform duration-300 mr-2">←</span> Guardar Carta
     </button>
 
     <div class="bg-[#F9F7F2] max-w-2xl w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] p-8 md:p-16 relative mt-4 mb-20">
-      
-      <div class="absolute inset-0 opacity-[0.4] mix-blend-multiply pointer-events-none" 
+
+      <div class="absolute inset-0 opacity-[0.4] mix-blend-multiply pointer-events-none"
            style="background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');"></div>
 
       <div class="flex justify-between items-end border-b border-[#2c2c2c]/10 pb-6 mb-12 relative z-10">
@@ -441,26 +432,46 @@
       </div>
 
       <div class="prose prose-p:text-[#4a4a4a] prose-p:font-serif-display prose-p:text-lg prose-p:leading-loose relative z-10 font-serif-display text-justify">
-        
+
         <p class="first-letter:text-5xl first-letter:font-bold first-letter:text-[#2c2c2c] first-letter:mr-1 first-letter:float-left">
-          Mi adorada Geri,
+  Mi querida y hermosa Gerista,
+</p>
+
+<p>
+  Quiero desearte una vez más un ¡¡feliz cumpleaños!!
+</p>
+
+        <p>
+          He creado esta pequeña página, más o menos con el estilo que creo que te gustaría, jeje.
+          Espero que realmente te guste. Quiero demostrar, aunque sea un poco, lo importante que eres para mí, mi amor.
         </p>
 
         <p>
-          He creado todo este pequeño mundo digital solo para intentar demostrarte, aunque sea un poco, lo inmensa que eres para mí. Dicen que las palabras se las lleva el viento, pero quería que estas quedaran escritas en código para que duren para siempre.
+          Me gustaría mucho poder crear una más grande donde organicemos todo lo nuestro y a la que tengamos acceso cuando queramos.
+          Podríamos hacerlo tú y yo y personalizarlo a nuestro gusto. Cualquier idea podría plasmarse aquí y sería como un historial de fotos y notas;
+          podríamos agregar recuerdos digitales, momentos especiales… hay un mundo de posibilidades, jeje.
         </p>
 
         <p>
-          Eres mi musa, mi compañera de aventuras y la razón por la que cada día tiene un color diferente. Gracias por tu sonrisa de oro, por tu paciencia y por esa magia que tienes de hacer que lo simple se vuelva extraordinario.
-        </p>
-        
-        <p>
-          Espero que te hayan gustado tus regalos (los visuales y los reales). Recuerda que cada cupón es una promesa y cada foto en el museo es un momento que atesoro en el alma.
+          Quiero decirte también que recuerdes que eres mi compañera de vida, <strong>ERES MI NOVIA</strong> y serás mi esposa pronto.
+          Trabajemos para que nuestro futuro sea como queramos y no como simplemente venga.
+          Yo quiero hacer muchas cosas contigo; piensa en qué te gusta hacer conmigo y veamos cómo y con qué vamos a conseguirlo.
         </p>
 
         <p>
-          Te amo con todo mi corazón.
+          Espero que nos casemos prontito y podamos vivir juntos, mi amor,
+          y seguir construyendo nuestra historia y llenando nuestra página de vida, jeje.
         </p>
+
+        <p>
+          Espero que te hayan gustado tus regalos (los visuales y los reales).
+          Recuerda que cada cupón es una promesa y cada foto en el museo es un momento que atesoro en el alma.
+        </p>
+
+        <p>
+          Te amo, mi pequeñita, mi rosita eterna.
+        </p>
+
 
         <div class="mt-16 text-right">
           <span class="font-handwriting text-4xl text-[#2c2c2c] transform -rotate-2 inline-block">
