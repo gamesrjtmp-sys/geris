@@ -180,6 +180,26 @@
             </div>
        </div>
 
+       <div (click)="navigate('LETTER')"
+          class="col-span-1 md:col-span-2 group cursor-pointer bg-[#F9F7F2] h-48 border border-[#eaddcf] shadow-sm hover:shadow-xl transition-all duration-500 relative overflow-hidden flex items-center justify-center">
+          
+          <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#2c2c2c_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+          <div class="absolute inset-3 border-2 border-double border-[#C4A484]/30 group-hover:border-[#C4A484] transition-colors duration-500"></div>
+
+          <div class="text-center z-10 relative transform group-hover:-translate-y-1 transition-transform duration-500">
+              <div class="text-4xl text-[#C4A484] mb-3 opacity-80">
+                ✎
+              </div>
+              <h3 class="text-3xl font-serif-display italic text-[#2c2c2c]">La Carta</h3>
+              <p class="text-[10px] uppercase tracking-[0.3em] text-gray-500 mt-2 group-hover:text-[#C4A484] transition-colors">
+                Para mis ojos solamente
+              </p>
+          </div>
+
+          <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-[#881337] rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-500 blur-xl"></div>
+      </div>
+
      </div>
      
      <p class="mt-16 text-[10px] uppercase tracking-[0.2em] text-gray-400">
@@ -397,5 +417,67 @@
 
   </div>
 }
+@if (currentView === 'LETTER') {
+  <div class="min-h-screen bg-[#e8e4dc] text-[#2C2C2C] p-4 md:p-12 animate-fade-in font-sans-body flex flex-col items-center">
+    
+    <button (click)="goHome()" class="self-start md:absolute md:top-12 md:left-12 text-xs uppercase tracking-[0.3em] text-gray-500 hover:text-[#2C2C2C] mb-8 flex items-center group transition-all z-20">
+      <span class="group-hover:-translate-x-2 transition-transform duration-300 mr-2">←</span> Guardar Carta
+    </button>
 
+    <div class="bg-[#F9F7F2] max-w-2xl w-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] p-8 md:p-16 relative mt-4 mb-20">
+      
+      <div class="absolute inset-0 opacity-[0.4] mix-blend-multiply pointer-events-none" 
+           style="background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');"></div>
+
+      <div class="flex justify-between items-end border-b border-[#2c2c2c]/10 pb-6 mb-12 relative z-10">
+        <div>
+          <span class="block text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-1">De:</span>
+          <span class="font-handwriting text-2xl text-[#881337]">Tu Amor</span>
+        </div>
+        <div class="text-right">
+          <span class="block text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-1">Fecha:</span>
+          <span class="font-serif-display italic text-lg text-[#2c2c2c]">Hoy y Siempre</span>
+        </div>
+      </div>
+
+      <div class="prose prose-p:text-[#4a4a4a] prose-p:font-serif-display prose-p:text-lg prose-p:leading-loose relative z-10 font-serif-display text-justify">
+        
+        <p class="first-letter:text-5xl first-letter:font-bold first-letter:text-[#2c2c2c] first-letter:mr-1 first-letter:float-left">
+          Mi adorada Geri,
+        </p>
+
+        <p>
+          He creado todo este pequeño mundo digital solo para intentar demostrarte, aunque sea un poco, lo inmensa que eres para mí. Dicen que las palabras se las lleva el viento, pero quería que estas quedaran escritas en código para que duren para siempre.
+        </p>
+
+        <p>
+          Eres mi musa, mi compañera de aventuras y la razón por la que cada día tiene un color diferente. Gracias por tu sonrisa de oro, por tu paciencia y por esa magia que tienes de hacer que lo simple se vuelva extraordinario.
+        </p>
+        
+        <p>
+          Espero que te hayan gustado tus regalos (los visuales y los reales). Recuerda que cada cupón es una promesa y cada foto en el museo es un momento que atesoro en el alma.
+        </p>
+
+        <p>
+          Te amo con todo mi corazón.
+        </p>
+
+        <div class="mt-16 text-right">
+          <span class="font-handwriting text-4xl text-[#2c2c2c] transform -rotate-2 inline-block">
+            Con amor, Risito
+          </span>
+        </div>
+
+      </div>
+
+      <div class="mt-12 flex justify-center opacity-80">
+        <div class="w-12 h-12 border border-[#2c2c2c]/20 rounded-full flex items-center justify-center">
+           <span class="font-serif-display italic text-xs">∞</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+}
 </main>

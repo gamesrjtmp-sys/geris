@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import confetti from 'canvas-confetti';
 
-type ViewState = 'CAKE' | 'HUB' | 'NETFLIX' | 'COUPONS' | 'MUSEUM';
+type ViewState = 'CAKE' | 'HUB' | 'NETFLIX' | 'COUPONS' | 'MUSEUM' | 'LETTER';;
 
 @Component({
   selector: 'app-cumple-geri',  // <--- IMPORTANTE: Cambiado para no chocar con app-root
