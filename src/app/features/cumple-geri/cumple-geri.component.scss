@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* Animaciones globales */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animaciones de la vela */
+.animate-flicker {
+  animation: flicker 2s infinite alternate;
+}
+
+.animate-flame {
+  animation: flame 0.1s infinite alternate;
+  box-shadow: 0 0 10px orange, 0 0 20px yellow;
+}
+
+@keyframes flicker {
+  0% { transform: scaleY(1); }
+  100% { transform: scaleY(1.02); }
+}
+
+@keyframes flame {
+  0% { transform: translateX(-50%) scale(1); opacity: 0.9; }
+  100% { transform: translateX(-50%) scale(1.1) rotate(2deg); opacity: 1; }
+}
+
+/* Fuente elegante */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+/* Animación del fuego mejorada */
+.animate-flame {
+  animation: flame-flicker 3s infinite ease-in-out alternate;
+  transform-origin: center bottom;
+  box-shadow: 
+    0 0 10px 2px rgba(255, 165, 0, 0.6), /* Brillo naranja */
+    0 0 20px 5px rgba(255, 215, 0, 0.4), /* Brillo amarillo externo */
+    0 -10px 30px rgba(255, 69, 0, 0.3);  /* Resplandor rojo superior */
+}
+
+@keyframes flame-flicker {
+  0%, 100% { transform: translateX(-50%) scale(1) rotate(-2deg); opacity: 0.9; }
+  25% { transform: translateX(-52%) scale(1.1, 1.2) rotate(2deg); opacity: 1; }
+  50% { transform: translateX(-48%) scale(0.9, 1.1) rotate(-1deg); opacity: 0.85; }
+  75% { transform: translateX(-50%) scale(1.05, 0.95) rotate(1deg); opacity: 1; }
+}
+
+/* Transición suave del fondo */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* Animación de la llama cuando se está soplando (más rápida y pequeña) */
+.animate-blowing-flame {
+  animation: blowing-flicker 0.2s infinite alternate ease-in-out;
+  transform-origin: center bottom;
+  filter: brightness(1.2); /* Se pone más brillante antes de apagarse */
+}
+
+@keyframes blowing-flicker {
+  0% { transform: translateX(-50%) scale(0.8) rotate(-5deg); opacity: 0.7; }
+  100% { transform: translateX(-50%) scale(0.6) rotate(5deg); opacity: 0.5; }
+}
+
+/* Animación del humo al apagarse */
+.smoke-effect {
+  animation: smoke-rise 2s ease-out forwards;
+  transform-origin: center bottom;
+}
+
+@keyframes smoke-rise {
+  0% { 
+    opacity: 0.6; 
+    transform: translateX(-50%) translateY(0) scale(1); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateX(-60%) translateY(-40px) scale(3); /* Sube, crece y se desvanece hacia la izquierda */
+  }
+}
+
+/* Clases utilitarias para el estilo */
+.font-serif-display {
+  font-family: 'Playfair Display', serif;
+}
+.font-sans-body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Animación del Carrusel Infinito */
+.animate-infinite-scroll {
+  /* Ajusta '60s' para hacerlo más rápido o más lento */
+  animation: scroll-left 120s linear infinite;
+}
+
+/* Pausar la animación al hacer hover */
+.hover\:paused:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Movemos la pista exactamente la mitad de su ancho hacia la izquierda */
+        transform: translateX(-50%);
+    }
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Opera */
+}
